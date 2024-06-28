@@ -18,7 +18,11 @@ const StyledAboutSection = styled.section`
     }
   }
 `;
+
 const StyledText = styled.div`
+  max-width: 800px; /* Increase the maximum width */
+  text-align: justify; /* Ensure text is justified */
+  margin: 0 auto; /* Center the text container */
   ul.skills-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 200px));
@@ -27,6 +31,7 @@ const StyledText = styled.div`
     margin: 20px 0 0 0;
     overflow: hidden;
     list-style: none;
+  
 
     li {
       position: relative;
@@ -46,6 +51,7 @@ const StyledText = styled.div`
     }
   }
 `;
+
 const StyledPic = styled.div`
   position: relative;
   max-width: 300px;
@@ -125,8 +131,16 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Market Research', 'Data Analysis', 'Brand Management', 'Digital Marketing', 
-  'SPSS', 'Tableau', 'MS Office', 'Python'];
+  const skills = [
+    'Java',
+    'JavaScript (ES6+)',
+    'Angular',
+    'React',
+    'Postgres',
+    'T-SQL',
+    'Spring Boot',
+    'Node.js',
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -136,32 +150,17 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-            With a core specialization in Marketing &amp; Strategy, I've orchestrated impactful
-             strategies in brand perceptions during my MBA summer internship for {' '}
-             <a href="https://www.tatastructura.com">Tata Structura</a> {' '} at{' '} 
-             <a href="https://drive.google.com/file/d/1xhGTFz7pe6kP7bZ4peDgJ7hlG630K8rz/view?usp=sharing">Tata Steel</a>.
+              Hello! I'm Sireesha, a passionate software developer. Welcome to my corner of the web!
             </p>
-
             <p>
-            I also spearheaded employer branding initiatives for {' '}
-            <a href="https://drive.google.com/file/d/1w-uN9jb86pxFXPYMDu_78P-d1CZJAx3V/view?usp=sharing">
-              Aditya Birla Fashion and Retail</a>, {' '} resulting in a remarkable 37% surge in consumer engagement 
-              during my remote live project as part of my MBA journey.
+              I find it pretty cool how, from the comfort of my little room with just my computer, I get to make a big impact. I believe in the magic of coding – turning ideas into real solutions and shaping the digital world. Every line of code has the power to create something amazing!
             </p>
-
             <p>
-            During my tenure at {' '} <a href="https://www.amdocs.com">Amdocs</a>, {' '} 
-            where I served as a Software Developer, I had the honor of being selected as one of 16 elite {' '} 
-            <a href="https://drive.google.com/file/d/16BGu5InZZDGCtoWas560ezwKsgVBKbI9/view?usp=sharing">Innovation Agents</a>.
+              My academic journey at the esteemed <a href="https://www.unt.edu/index.html">University of North Texas</a>, coupled with my professional engagements with clients including Ikcon Technologies, University of North Texas, and Amdocs, has afforded me a comprehensive skill set developed in diverse settings. As a recent graduate, these experiences have proven invaluable in navigating the dynamic landscape of the software industry. Currently, my primary focus revolves around augmenting my Full-Stack expertise and amplifying the value I bring to my team.
             </p>
-
             <p>
-            Moreover, my role as a {' '} <a href="https://drive.google.com/file/d/1iRTZfE7v5Y99BYZVxevaGBVtF90t-TOb/view?usp=sharing">
-              Placement Coordinator</a> {' '} at IIM Rohtak saw me cultivate over 30 new corporate relationships, culminating in a 
-              remarkable 42% boost in campus placements.
+              Here are a few technologies I’ve been working with recently:
             </p>
-
-            <p>My skills are not limited to this list!</p>
           </div>
 
           <ul className="skills-list">

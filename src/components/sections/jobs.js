@@ -8,13 +8,15 @@ import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
 
 const StyledJobsSection = styled.section`
-  max-width: 700px;
 
   .inner {
     display: flex;
+    width:800px;
+    align:Justify;
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       display: block;
+
     }
 
     // Prevent container from jumping
@@ -140,6 +142,7 @@ const StyledTabPanel = styled.div`
   width: 100%;
   height: auto;
   padding: 10px 5px;
+  text-align: Justify;
 
   ul {
     ${({ theme }) => theme.mixins.fancyList};

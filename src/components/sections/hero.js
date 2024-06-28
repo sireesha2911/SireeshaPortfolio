@@ -3,7 +3,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
-
+import { srConfig, email } from '@config';
 const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
@@ -11,6 +11,7 @@ const StyledHeroSection = styled.section`
   min-height: 100vh;
   height: 100vh;
   padding: 0;
+  text-align: left;  // Added for straight alignment
 
   @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
     height: auto;
@@ -35,9 +36,10 @@ const StyledHeroSection = styled.section`
     line-height: 0.9;
   }
 
-  p {
+ p {
     margin: 20px 0 0;
-    max-width: 540px;
+    max-width: 90%; /* Increase width */
+    text-align: justify; /* Align text straight */
   }
 
   .email-link {
@@ -57,38 +59,27 @@ const Hero = () => {
 
     const timeout = setTimeout(() => setIsMounted(true), navDelay);
     return () => clearTimeout(timeout);
-  }, []);
+  }, [prefersReducedMotion]);
 
-  const one = <h1>Namaste! My name is</h1>;
-  const two = <h2 className="big-heading">Chandrika Deb</h2>;
-  const three = <h3 className="medium-heading">MBA | Marketing Enthusiast | Freelance Blogger</h3>;
+  const one = <h1>Hello! My name is</h1>;
+  const two = <h2 className="big-heading">Sireesha Valluri</h2>;
+  const three = <h3 className="medium-heading">I create software solutions, one line of code at a time.</h3>;
   const four = (
     <>
       <p>
-        <b>Glad to e-meet you!</b>
+        I am Sireesha, As a passionate software engineer and Backend Java Developer with expertise in Angular and React, I thrive on solving complex problems and driving innovation. With extensive experience across the entire Software Development Life Cycle (SDLC), I specialize in designing, building, and deploying scalable solutions for medium-to-large scale projects.
       </p>
-
       <p>
-        I am Chandrika Deb, an alumnus of {' '} <a href="http://www.iimrohtak.ac.in">
-        IIM Rohtak</a> {' '} and {' '} <a href="https://www.bitmesra.ac.in">BIT Mesra</a> {' '} currently spearheading impactful marketing initiatives at {' '}
-        <a href="https://www.tatasteel.com">Tata Steel</a>.
-      </p>
-
-
-      <p>
-        When not decoding the customer journey, you can find me sketching on {' '}
-        <a href="https://pin.it/4W1Rxtj">Pinterest</a> {' '} or writing technical blogs for {' '}
-        <a href="https://www.lambdatest.com">LambdaTest</a> {' '} and other freelance clients.
-      </p>
+        If our goals align, let's connect to explore collaborative opportunities and create a lasting impact together.
+      </p>   
     </>
   );
   const five = (
     <a
-      className="email-link"
-      href="https://chandrikadeb7.gumroad.com"
+      className="email-link" href={`mailto:${email}`}
       target="_blank"
       rel="noreferrer">
-      Check out my products!
+      Contact
     </a>
   );
 

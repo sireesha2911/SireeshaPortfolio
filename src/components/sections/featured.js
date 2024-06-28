@@ -95,6 +95,9 @@ const StyledProject = styled.li`
     position: relative;
     grid-column: 1 / 7;
     grid-row: 1 / -1;
+    width:600px;
+    text:justify;
+    justify-content: start;
 
     @media (max-width: 1080px) {
       grid-column: 1 / 9;
@@ -160,7 +163,6 @@ const StyledProject = styled.li`
     background-color: var(--light-navy);
     color: var(--light-slate);
     font-size: var(--fz-lg);
-
     @media (max-width: 768px) {
       padding: 20px 0;
       background-color: transparent;
